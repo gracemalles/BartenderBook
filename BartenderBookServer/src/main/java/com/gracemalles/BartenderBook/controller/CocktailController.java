@@ -11,28 +11,21 @@ import java.util.List;
 @RestController
 public class CocktailController {
 
-    // holds all of the endpoints
-    // requests mapping / requestParam
-    //
-
     @Autowired
-    private CocktailsDao cocktailsDao;
+     CocktailsDao cocktailsDao;
 
-//    public CocktailController(CocktailsDao cocktailsDao) {
-//        this.cocktailsDao = cocktailsDao;
-//    }
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)
     public List<Cocktails> getAllCocktails() {
         return cocktailsDao.getAllCocktails();
     }
 
-    @RequestMapping(path = "/{name}", method = RequestMethod.GET)
+    @RequestMapping(path = "/drinks/{name}", method = RequestMethod.GET)
     public Cocktails getCocktailByName(@PathVariable String name) {
         return cocktailsDao.searchCocktailByName(name);
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(path = "/drink-id/{id}", method = RequestMethod.GET)
     public Cocktails getCocktailById(@PathVariable Long id) {
         return cocktailsDao.searchCocktailByID(id);
     }

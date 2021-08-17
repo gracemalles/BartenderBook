@@ -1,37 +1,35 @@
-Created a cocktail database in Dbvisualizer
+1. Created a cocktail database in Dbvisualizer
 
 Controller Package
-handles HTTP requests
----->
+Listening for HTTP requests
 
-
+Controller is listening for request from external client (Postman)
+    - if the controller hears the request come in to retrieve all cocktails
+    - it will call getAllCocktails() in JDBCCocktailDAO and retrieve cocktailsList
+    - and send back to the client
+------------------------------------------------------------------------------------------------------------------------
 Dao Package
 ----->
 JDBCCocktailDao class - connects to database and accesses data
 
-
-
+------------------------------------------------------------------------------------------------------------------------
 Model Package
 ---->
 Cocktail class - creates new cocktail objects
-
-
+------------------------------------------------------------------------------------------------------------------------
 REVIEW
 View Package
 what we show the client and handles user input
----->
-BartenderBookApplication - holds main method and the function run
-                           is part of the spring boot framework
+
+------------------------------------------------------------------------------------------------------------------------
+Next Steps
+note - verify through postman not internet http://localhost:8080/all
+
+8/17
+Create Client Project
+Copy over CLI and build out menus there
+
+Additional:
+Create unit tests/ integration tests
 
 
-BartenderBookCLI
-Client project --> bring BartenderBookCLI over
-services
-interface / class --> friday class
-
-in class that implements interfaces --> www.thecocktaildb.com/api/json/v1/1/random.php
-
-reference day 13
-need seperate client project to handle ui
---> server takes database from URL to get info --> sends info to local host at port 8080
---> client will listen to 8080 on local host so that any data on port can be retrieved

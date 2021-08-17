@@ -48,13 +48,19 @@ public class JDBCCocktailDAO implements CocktailsDao {
     @Override
     public Cocktails searchCocktailByName(String name) {
     String sql = "SELECT * FROM cocktails WHERE cocktail_name = ?";
-    Cocktails cocktail = null;
+    Cocktails cocktails = null;
     SqlRowSet results = jdbcTemplate.queryForRowSet(sql, name);
-    while(results.next()){
-        cocktail = mapResultsToCocktails(results);
+    if (results.next()){
+
+        Long cocktailId = results.getLong("cocktail_id");
+        String name2 = results.getString("cocktail_name");
+        String ingredients = results.getString("ingredients");
+        String recipe = results.getString("recipe");
+
+       cocktails = new Cocktails(cocktailId, name2, ingredients, recipe);
 
     }
-        return cocktail;
+        return cocktails;
     }
 
     @Override
@@ -62,8 +68,14 @@ public class JDBCCocktailDAO implements CocktailsDao {
     Cocktails cocktails = null;
     String sql = "SELECT * FROM cocktails WHERE cocktail_id = ?";
     SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
-    if(results.next()){
-        cocktails = mapResultsToCocktails(results);
+        if (results.next()){
+
+            Long cocktailId = results.getLong("cocktail_id");
+            String name2 = results.getString("cocktail_name");
+            String ingredients = results.getString("ingredients");
+            String recipe = results.getString("recipe");
+
+            cocktails = new Cocktails(cocktailId, name2, ingredients, recipe);
     }
         return cocktails;
     }
