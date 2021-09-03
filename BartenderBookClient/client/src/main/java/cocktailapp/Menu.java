@@ -1,12 +1,15 @@
-import model.Cocktail;
-import services.CocktailService;
+package cocktailapp;
+
+import cocktailapp.model.Cocktail;
+import org.springframework.web.client.RestTemplate;
+import cocktailapp.services.CocktailService;
 
 import java.util.Scanner;
 
 public class Menu {
 
     private boolean exit;
-    private CocktailService cs;
+    private CocktailService cs = new CocktailService("http://localhost:8080\"");
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -25,7 +28,7 @@ public class Menu {
     }
     private void printHeader(){
         System.out.println("---------------------------------------------");
-        System.out.println("     Welcome to the Bartending Book"          );
+        System.out.println("     Welcome to the Bartender Book"          );
         System.out.println("                                             ");
         System.out.println("---------------------------------------------");
     }
@@ -33,7 +36,7 @@ public class Menu {
     private void printMenu(){
         System.out.println("\nPlease make a selection:");
         System.out.println("(1) Display Cocktails");
-        System.out.println("(2) Edit Menu");
+        System.out.println("(2) Edit cocktailapp.model.Menu");
         System.out.println("(3) Exit");
     }
 
