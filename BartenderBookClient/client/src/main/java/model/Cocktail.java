@@ -1,6 +1,6 @@
 package model;
 
-public class Cocktails {
+public class Cocktail {
 
     private Long id;
     private String name;

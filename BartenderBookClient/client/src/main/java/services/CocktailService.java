@@ -1,6 +1,6 @@
 package services;
 
-import model.Cocktails;
+import model.Cocktail;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -17,15 +17,26 @@ public class CocktailService {
         this.restTemplate = restTemplate;
     }
 
-    public Cocktails[] displayMenu(){
+    public Cocktail[] displayMenu(){
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity entity = new HttpEntity(httpHeaders);
-        Cocktails[] cocktails = null;
-        cocktails = restTemplate.exchange("http localhost:5432/all",
+        Cocktail[] cocktails = null;
+        cocktails = restTemplate.exchange("http://localhost:8080/all",
                 HttpMethod.GET, entity,
-                Cocktails[].class).getBody();
+                Cocktail[].class).getBody();
 
         return cocktails;
+    }
+
+    public Cocktail getDrinkRecipe(String selection){
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity entity = new HttpEntity(httpHeaders);
+        Cocktail cocktailRecipe = restTemplate.exchange("http://localhost:8080/drinks/name",
+                HttpMethod.GET, entity,
+                Cocktail.class).getBody();
+
+        return cocktailRecipe;
     }
 }
