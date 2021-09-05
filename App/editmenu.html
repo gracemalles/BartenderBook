@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu</Menu></title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class = "grid-container">
+        <div class="grid-header">
+    <header>
+        <img src="images/cosmo.jpg" alt="Cosmo">
+        <em id="head-text">Bartending Book</em>
+    </header>
+
+
+</div>
+    <div class="grid-main">
+        <main id= "main">
+            <div class = "main">
+                <h2>Bartending Book Edit Menu</h2>
+    
+
+                <div class="float-left">
+                    <button id="btnToggleForm" type="button" class="btn btn-outline-success btn-sm"">Add Cocktail</button>
+                </div>
+
+                <div class="float-right">
+                    <button id="btnToggleForm" type="button" class="btn btn-outline-success btn-sm"">Remove Cocktail</button>
+                </div>
+
+
+                <form class="d-none">
+                    <div class="form-group">
+                        <label for="cocktail">Cocktail</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Cocktail">
+                    </div>
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients</label>
+                        <input type="text" class="form-control" id="ingredients" placeholder="Enter Ingredients">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe">Recipe</label>
+                        <textarea class="form-control" id="recipe" rows="3"></textarea>
+                    </div>
+                    <div class="float-right">
+                        <button id="btnSaveCocktail" type="submit" class="btn btn-primary btn-sm">Save Cocktail</button>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </form>
+
+
+
+            </div>
+        </div>
+        
+        </main>
+
+
+
+
+
+    
+        <div class="grid-footer">
+            <footer>© Tech Elevator 2021</footer>
+        </div>
+    </div>
+</body>
+</html>

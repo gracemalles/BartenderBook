@@ -1,0 +1,36 @@
+/* grid */
+.grid-container{
+    display: grid;
+    grid-template-rows: 2fr 10fr 1fr;
+    grid-row-gap: 20px;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: pink;
+}
+#head-text {
+    font-size: 40px;
+}
+
+header img {
+    height: 80px;
+    width: auto;
+    
+}
+.grid-header{
+    background-color: white;
+}
+
+.grid-main{
+    background-color: plum;
+    text-align: center;
+    
+}
+
+li {
+    list-style: none;
+}
+
+
+
