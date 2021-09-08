@@ -4,7 +4,7 @@
 }
 
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,19 +31,16 @@ body{
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 20px;
     cursor: pointer;
-
 }
 
 #main{
     text-align: center;
     color: darkslategrey;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     text-emphasis: bolder;
     min-height: 100vh;
-    border: 2px solid white;
-    background: rgba(255,255,255,0.8);
+  
     
    
 }
@@ -56,5 +53,3 @@ body{
     width: max-content;
     font-size: 20px;
 }
-
-
