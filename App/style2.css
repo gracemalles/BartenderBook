@@ -1,77 +1,37 @@
 .grid-container{
     display: grid;
-    grid-template-rows: 2fr 10fr 1fr;
-    grid-row-gap: 20px;
+    grid-template-rows: 10% 80% 10%;
 }
 
 body{
-    font-family: sans-serif;
-    background-color: pink;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(images/background.png);
+    min-height: 100vh;
+
 }
 
 #head-text {
     font-size: 40px;
+    color: white;
 }
 
-header img {
-    height: 80px;
-    width: auto;
-    
-}
 
 .grid-header{
-    background-color: white;
+    background-color: black;
 }
 
-.grid-main{
-    display: flex;
-    justify-content: space-around;
-    background-color: plum;
+#main{
     text-align: center;
-    
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+   
 }
 
 
-/********************************************************/
-
-
-#main {
-    margin: 1rem 0;
-    width: 800px;
-}
-
-#main div.well-display {
-    display: flex;
-    justify-content: space-around;
-}
-
-#main div.well-display div.well {
-    display: inline-block;
-    width: 15%;
-    border: 1px black solid;
-    border-radius: 6px;
-    text-align: center;
-    margin: 0.25rem;
-}
-
-#main div.well-display div.well span.amount {
-    color: darkslategray;
-    display: block;
-    font-size: 2.5rem;
-}
-
-#main div.customer {
-    border: 1px black solid;
-    border-radius: 6px;
-    padding: 1rem;
-    margin: 10px;
-}
-
-
-
-#main div.customer p {
-    margin: 20px;
-    font-size: 20px;
-    color:blue
+.grid-footer{
+    background-color: black;
+    color: white;
+    height: 20px;
 }
 

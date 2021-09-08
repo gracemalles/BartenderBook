@@ -41,8 +41,8 @@ function displayCocktails() {
 function displayCocktailMenu(cocktail) { 
     const main = document.getElementById('main');
     const tmpl = document.getElementById('cocktail-template').content.cloneNode(true);
-    tmpl.querySelector('h4').innerText = cocktail.name;
-    tmpl.querySelector('h3').innerText = cocktail.ingredients;
+    tmpl.querySelector('h3').innerText = cocktail.name;
+    tmpl.querySelector('h4').innerText = cocktail.ingredients;
     tmpl.querySelector('p').innerText = cocktail.recipe;
     main.appendChild(tmpl);
 }

@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Cocktails</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
     <div class = "grid-container">
         <div class="grid-header">
     <header>
-        <img src="images/cosmo.jpg" alt="Cosmo">
+  
         <em id="head-text">Bartending Book</em>
     </header>
 </div>
 
     <div id="main">
+        <h2>Cocktail Menu</h2>
     <template id="cocktail-template">
         <div class="cocktailMenu">
-            <h4></h4>
-            <h3></h3>
-            <p></p>
+            <h3 id = name></h3>
+            <h4 id = ingredients></h4>
+            <p id = recipe></p>
         </div>
     </template>
 </div>
+
+<!-- <div class="grid-footer">
+    <footer>© Tech Elevator <script>document.write(new Date().getFullYear());</script></footer>
+</div> -->
+
     <script src="app.js"></script>
 </body>
 </html>

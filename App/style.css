@@ -1,35 +1,51 @@
-/* grid */
 .grid-container{
     display: grid;
-    grid-template-rows: 2fr 10fr 1fr;
-    grid-row-gap: 20px;
+    grid-template-rows: 10% 80% 10%;
 }
 
 body{
-    font-family: sans-serif;
-    background-color: pink;
-}
-#head-text {
-    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(images/background.png);
+    min-height: 100vh;
+
 }
 
-header img {
-    height: 80px;
-    width: auto;
-    
+#head-text {
+    font-size: 40px;
+    color: white;
 }
+
+
 .grid-header{
-    background-color: white;
+    background-color: black;
 }
 
 .grid-main{
-    background-color: plum;
     text-align: center;
-    
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+   
 }
 
-li {
+.grid-main a{
+    color: white;
+    text-align: center;   
+}
+
+.grid-main a:hover {
+    color: gold;
+}
+
+li{
     list-style: none;
+}
+
+
+.grid-footer{
+    background-color: black;
+    color: white;
+    height: 20px;
 }
 
 
