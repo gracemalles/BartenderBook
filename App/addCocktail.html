@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Cocktail</Menu></title>
-    <link rel="stylesheet" href="styleEditMenu.css">
+    <link rel="stylesheet" href="addCocktailStyles.css">
 </head>
 
 <body>
@@ -12,15 +12,15 @@
         <div class="grid-header">
     <header>
         <em id="head-text">Bartending Book</em>
-       <button id= "main-button"><a href="main.html">Main Menu</a></button> 
+        <button id= "main-button"><a href="main.html">Main Menu</a></button> 
     </header>
 
-<div>
-    <h2>Please enter the details to the cocktail you want to add:</h2>
+<div id= "form">
+    <h2>Please enter details to the cocktail you want to add:</h2>
     <form class="d-none">
         <div class="form-group">
             <label for="cocktail">Cocktail</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Cocktail">
+            <input type="text" class="form-control" id="name" placeholder="Enter Cocktail Name">
         </div>
         <div class="form-group">
             <label for="ingredients">Ingredients</label>
@@ -28,12 +28,11 @@
         </div>
         <div class="form-group">
             <label for="recipe">Recipe</label>
-            <textarea class="form-control" id="recipe" rows="3"></textarea>
+            <textarea class="form-control" id="recipe" rows="8" cols="35"></textarea>
         </div>
         <div class="float-right">
             <button id="btnSaveCocktail" type="submit" class="btn btn-primary btn-sm">Save Cocktail</button>
         </div>
-        <div class="clearfix"></div>
         <hr>
     </form>
 </div>

@@ -1,7 +1,3 @@
-.grid-container{
-    display: grid;
-    grid-template-rows: 10% auto 10%;
-}
 
 body{
     font-family: 'Lato', sans-serif;
@@ -10,6 +6,7 @@ body{
     background-repeat: no-repeat;
 }
 .grid-header{
+    height: 100px;
     background-color: darkslategrey;
 }
 
@@ -31,20 +28,19 @@ body{
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 20px;
     cursor: pointer;
-
 }
+
+
 
 #main{
     text-align: center;
     color: darkslategrey;
     font-family: 'Lato', sans-serif;
     text-emphasis: bolder;
-    min-height: 100vh;
     border: 2px solid white;
     background: rgba(255,255,255,0.8);
-    
+    height: 100%;
    
 }
 
