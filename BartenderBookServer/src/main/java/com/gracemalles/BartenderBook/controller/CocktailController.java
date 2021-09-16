@@ -32,10 +32,9 @@ public class CocktailController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(path = "/", method = RequestMethod.POST)
-    public void addNewCocktailItem(String name, @RequestBody String ingredients,
-                                                @RequestBody String recipe){
-         cocktailsDao.addNewCocktailItem(name, ingredients, recipe);
+    @RequestMapping(path = "/drinks", method = RequestMethod.POST)
+    public void addNewCocktailItem( @RequestBody Cocktails cocktail){
+         cocktailsDao.addNewCocktailItem(cocktail);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)

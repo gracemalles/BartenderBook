@@ -1,4 +1,6 @@
 
+//import axios from 'axios';
+
 let cocktails = [];
 
 document.addEventListener('DOMContentLoaded',() => {
@@ -46,5 +48,7 @@ function displayCocktailMenu(cocktail) {
     tmpl.querySelector('p').innerText = cocktail.recipe;
     main.appendChild(tmpl);
 }
+// // delete cocktail 
+// function deleteCocktail(name){
 
-
+// }

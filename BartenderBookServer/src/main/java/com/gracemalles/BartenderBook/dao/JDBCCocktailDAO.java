@@ -81,7 +81,10 @@ public class JDBCCocktailDAO implements CocktailsDao {
     }
 
     @Override
-    public void addNewCocktailItem(String name, String ingredients, String recipe) {
+    public void addNewCocktailItem(Cocktails cocktail) {
+        String name = cocktail.getName();
+        String ingredients = cocktail.getIngredients();
+        String recipe = cocktail.getRecipe();
     String sql = "INSERT INTO cocktails(cocktail_name, ingredients, recipe)" +
                  "VALUES(?, ?, ?)";
     jdbcTemplate.update(sql,name, ingredients, recipe );

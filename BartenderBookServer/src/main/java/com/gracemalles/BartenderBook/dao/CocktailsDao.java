@@ -12,7 +12,7 @@ public interface CocktailsDao {
 
     public Cocktails searchCocktailByID(Long id);
 
-    public void addNewCocktailItem(String name, String ingredients, String recipe);
+    public void addNewCocktailItem(Cocktails cocktails);
 
     public void deleteCocktail(String name);
 
